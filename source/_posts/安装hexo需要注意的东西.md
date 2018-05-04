@@ -1,7 +1,7 @@
 ---
 title: 安装hexo需要注意的东西
 date: 2018-05-02 17:38:25
-tags:
+tags: 教程
 ---
 
 1. next主题连接数据统计的时候要注意是appid还是add_id

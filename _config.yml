@@ -18,6 +18,14 @@ root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
+#Local Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+# 百度分享
+#baidushare: true
 # Directory
 source_dir: source
 public_dir: public
@@ -27,6 +35,10 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+# 自动形成摘要
+auto_excerpt:
+  enable: true
+  length: 150
 
 # Writing
 new_post_name: :title.md # File name of new posts

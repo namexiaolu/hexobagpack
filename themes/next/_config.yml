@@ -97,9 +97,9 @@ menu:
   tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
-  schedule: /schedule/ || calendar
-  sitemap: /sitemap.xml || sitemap
-  commonweal: /404/ || heartbeat
+  # schedule: /schedule/ || calendar
+  # sitemap: /sitemap.xml || sitemap
+  # commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -113,8 +113,8 @@ menu_icons:
 # Schemes
 #scheme: Muse
 #scheme: Mist
-#scheme: Pisces
-scheme: Gemini
+scheme: Pisces
+#scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -126,8 +126,8 @@ scheme: Gemini
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
+social:
+  GitHub: https://github.com/namexiaolu || github
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -142,14 +142,16 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
+  Github: github
 
 # Blog rolls
 links_icon: link
-links_title: Links
+links_title: 友情连接
 links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  #Title: http://example.com
+  nicetmy: http://nicetmy.com/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
@@ -242,9 +244,9 @@ post_wordcount:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
-#reward_comment: Donate comment here
-#wechatpay: /images/wechatpay.jpg
-#alipay: /images/alipay.jpg
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: /blog/images/wechatpay.png
+alipay: /blog/images/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
@@ -278,6 +280,7 @@ custom_logo:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
+#highlight_theme: night
 
 
 # ---------------------------------------------------------------
@@ -381,9 +384,9 @@ valine:
   enable: true
   appid: 'cO3qxEVBcsux1rJOMovpQIfS-gzGzoHsz'
   appkey: 'M9Y485dOPSmvpMB1Sgm9pPqm'
-  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
-  verify: false # Verification code
-  placeholder: Just go go # comment box placeholder
+  notify: true # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: true # Verification code
+  placeholder: 随便说点儿什么 # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
@@ -418,7 +421,7 @@ gitment:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#baidushare:
+#baidushare: true
 ##  type: button
 
 # Share
@@ -591,7 +594,10 @@ calendar:
   showDeleted: false
   singleEvents: true
   maxResults: 250
+  
 
+
+  
 # Algolia Search
 algolia_search:
   enable: false
@@ -603,9 +609,10 @@ algolia_search:
     hits_stats: "${hits} results found in ${time} ms"
 
 # Local search
+
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
-  enable: false
+  enable: ture
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
@@ -696,7 +703,7 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # three_waves
 three_waves: false
@@ -742,7 +749,11 @@ vendors:
 
   # Internal version: 1.9.7
   # See: https://github.com/tuupola/jquery_lazyload
+
   lazyload:
+  enable: true 
+  onlypost: false
+  loadingImg: # eg. ./images/loading.png 
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
@@ -803,6 +814,10 @@ vendors:
   # needMoreShare2
   # https://github.com/revir/need-more-share2
   needMoreShare2:
+  
+  # 文章末尾添加“本文结束”标记
+passage_end_tag:
+  enabled: true
 
 
 # Assets
